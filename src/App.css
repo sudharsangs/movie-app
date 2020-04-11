@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-image: linear-gradient(-225deg, #7DE2FC 0%, #B9B6E5 100%);
+    background-size: cover;
+}
+
+header {
+    padding: 50px 15px 0px;
+
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    font-family: 'Special Elite', cursive;
+    text-align: center;
+    background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+main {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+
+}
+
+section {
+    padding: 15px;
+}
+
+.searchbox {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    background: none;
+    background-image: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
+    border-radius: 8px;
+    transition: 0.4s ease-out;
+}
+
+.searchbox:focus {
+    box-shadow: 0px 0px 8px 3px #2475B0;
+}
