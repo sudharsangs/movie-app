@@ -2,7 +2,9 @@ import React,{useState} from 'react';
 import axios from 'axios';
 import Search from './components/Search'
 import Results from './components/Results';
+import Popup from './components/Popup';
 import './App.css';
+
 
 function App() {
     
@@ -18,6 +20,16 @@ function App() {
         }
     }
 
+    const openPopup = async (id) => {
+        const popres = await axios(apiurl + '&i' + id);
+        console.log(popres);
+        setSelected(popres.data);
+    }
+
+    const closePopup = () => {
+        setSelected({});
+    }
+
     const handleInput = (e) => {
         let sea = e.target.value;
         setTerm(sea);
@@ -30,6 +42,9 @@ function App() {
             </header>
             <main>
                 <Search handleInput={handleInput} search={search} />
+                <Results results={results} openPopup={openPopup}/>
+
+                {(typeof selected.Title != "undefined") ? <Popup selected={selected} closePopup={closePopup}/>:false}
             </main>
         </div>
     )
