@@ -21,7 +21,7 @@ function App() {
     }
 
     const openPopup = async (id) => {
-        const popres = await axios(apiurl + '&i' + id);
+        const popres = await axios(apiurl + '&i=' + id);
         console.log(popres);
         setSelected(popres.data);
     }
