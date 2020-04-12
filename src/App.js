@@ -38,7 +38,7 @@ function App() {
     return (
         <div>
             <header>
-                <h1>Movies App</h1>
+                <h1>Movie Beat</h1>
             </header>
             <main>
                 <Search handleInput={handleInput} search={search} />
