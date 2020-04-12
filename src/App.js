@@ -12,7 +12,7 @@ function App() {
     const [results,setResults] = useState([]);
     const [selected,setSelected] = useState({});
        
-    const apiurl = ` http://www.omdbapi.com/?apikey=${process.env.REACT_APP_OMDB_API_KEY}`;
+    const apiurl = ` https://www.omdbapi.com/?apikey=${process.env.REACT_APP_OMDB_API_KEY}`;
     const search = async (e) => {
         if(e.key === "Enter"){
             const response = await axios(apiurl + "&s=" + term);
